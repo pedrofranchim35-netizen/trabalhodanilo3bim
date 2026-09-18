@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nexus Tech - Tecnologias do Futuro. Inspirado em designs de alto nível.">
+    <title>NEXUS TECH | FUTURE IS NOW</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>N</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Teko for ultra-bold headings (LN4 style), Inter for readable text -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Teko:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Noise Overlay -->
+    <div class="noise"></div>
+    <div class="scanlines"></div>
+    
+    <!-- Background Particles -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <h1 class="glitch" data-text="LOADING">LOADING</h1>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">NEXUS<span class="neon-text">.</span>TECH</div>
+        <nav class="nav-links">
+            <a href="#wearables" class="hover-link" data-text="WEARABLES">WEARABLES</a>
+            <a href="#smart-home" class="hover-link" data-text="SMART HOME">SMART HOME</a>
+            <a href="#audio" class="hover-link" data-text="ÁUDIO">ÁUDIO</a>
+        </nav>
+        <a href="#preorder" class="btn btn-outline">PRÉ-VENDA</a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <main>
+        <!-- Marquee Top -->
+        <div class="marquee-container">
+            <div class="marquee">
+                <span>NEXUS TECH // 8 PRODUTOS REVOLUCIONÁRIOS // O FUTURO É AGORA // NEXUS TECH // 8 PRODUTOS REVOLUCIONÁRIOS // O FUTURO É AGORA // </span>
+                <span>NEXUS TECH // 8 PRODUTOS REVOLUCIONÁRIOS // O FUTURO É AGORA // NEXUS TECH // 8 PRODUTOS REVOLUCIONÁRIOS // O FUTURO É AGORA // </span>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title reveal-text">
+                    REDEFINE <br>
+                    <span class="neon-text outline-text">YOUR</span> <br>
+                    REALITY
+                </h1>
+                <p class="hero-subtitle reveal-fade">Descubra 8 gadgets que vão hackear a sua rotina e elevar sua produtividade ao limite absoluto.</p>
+                <div class="hero-actions reveal-fade">
+                    <a href="#wearables" class="btn btn-solid">START EXPLORING</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper reveal-fade">
+                <img src="assets/images/hero.jpg" alt="Nexus Hub" class="hero-img-glitch">
+            </div>
+        </section>
+
+        <!-- Marquee Divider -->
+        <div class="marquee-container bg-neon">
+            <div class="marquee marquee-reverse text-black">
+                <span>WEARABLES // SMART HOME // ÁUDIO AVANÇADO // GADGETS // WEARABLES // SMART HOME // ÁUDIO AVANÇADO // GADGETS // </span>
+                <span>WEARABLES // SMART HOME // ÁUDIO AVANÇADO // GADGETS // WEARABLES // SMART HOME // ÁUDIO AVANÇADO // GADGETS // </span>
+            </div>
+        </div>
+
+        <!-- Section 1: Wearables & Display -->
+        <section class="category-section" id="wearables">
+            <div class="section-header reveal-fade">
+                <h2 class="section-title">01. WEARABLES</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="grid-layout">
+                <div class="product-item reveal-slide" data-cursor="VER MAIS" data-product="visionar">
+                    <div class="prod-num">001</div>
+                    <h3 class="prod-name">VISION<span class="neon-text">AR</span> GLASS</h3>
+                    <p class="prod-desc">Óculos de Realidade Aumentada Ultraleves. GPS, notificações e tradução em tempo real direto na retina.</p>
+                </div>
+                <div class="product-item reveal-slide" data-cursor="VER MAIS" data-product="pulsetouch">
+                    <div class="prod-num">002</div>
+                    <h3 class="prod-name">PULSETOUCH <span class="neon-text">PRO</span></h3>
+                    <p class="prod-desc">Pulseira Háptica para Treinamento e Games com feedback tátil direcional e vibrações imersivas.</p>
+                </div>
+                <div class="product-item reveal-slide" data-cursor="VER MAIS" data-product="auraring">
+                    <div class="prod-num">003</div>
+                    <h3 class="prod-name">AURA<span class="neon-text">RING</span></h3>
+                    <p class="prod-desc">Anel de Controle por Gestos. Controle apresentações e sua casa inteligente com movimentos no ar.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Smart Home -->
+        <section class="category-section alt-bg" id="smart-home">
+            <div class="section-header reveal-fade">
+                <h2 class="section-title">02. SMART HOME</h2>
+                <div class="section-line neon-line"></div>
+            </div>
+            <div class="grid-layout">
+                <div class="product-item reveal-slide" data-cursor="VER MAIS" data-product="holodesk">
+                    <div class="prod-num">004</div>
+                    <h3 class="prod-name">HOLO<span class="neon-text">DESK</span> AI</h3>
+                    <p class="prod-desc">Hub de Projeção Holográfica de Mesa. Interfaces flutuantes 3D e assistente IA integrado.</p>
+                </div>
+                <div class="product-item reveal-slide" data-cursor="VER MAIS" data-product="hydrosmart">
+                    <div class="prod-num">005</div>
+                    <h3 class="prod-name">HYDRO<span class="neon-text">SMART</span></h3>
+                    <p class="prod-desc">Garrafa de Água com Esterilização UV-C e rastreador de hidratação inteligente.</p>
+                </div>
+                <div class="product-item reveal-slide" data-cursor="VER MAIS" data-product="pureair">
+                    <div class="prod-num">006</div>
+                    <h3 class="prod-name">PUREAIR <span class="neon-text">HALO</span></h3>
+                    <p class="prod-desc">Purificador de Ar Vestível. Crie um escudo invisível de ar puro ao redor do seu rosto.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Áudio e Periféricos -->
+        <section class="category-section" id="audio">
+            <div class="section-header reveal-fade">
+                <h2 class="section-title">03. PERIFÉRICOS</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="grid-layout grid-2-cols">
+                <div class="product-item reveal-slide" data-cursor="VER MAIS" data-product="orbital">
+                    <div class="prod-num">007</div>
+                    <h3 class="prod-name">ORBITAL <span class="neon-text">SOUND</span></h3>
+                    <p class="prod-desc">Caixa de som com levitação magnética e áudio espacial de altíssima fidelidade.</p>
+                </div>
+                <div class="product-item reveal-slide" data-cursor="VER MAIS" data-product="beamtype">
+                    <div class="prod-num">008</div>
+                    <h3 class="prod-name">BEAM<span class="neon-text">TYPE</span></h3>
+                    <p class="prod-desc">Teclado Projetor Laser com trackpad integrado. Transforma qualquer superfície num setup pro.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Immersive CTA -->
+        <section class="cta-huge" id="preorder">
+            <div class="cta-inner reveal-fade">
+                <h2 class="massive-text">JOIN THE <br><span class="neon-text outline-text">REVOLUTION</span></h2>
+                <p>Garanta acesso antecipado à coleção completa.</p>
+                <form id="lead-form" class="brutalist-form">
+                    <input type="email" id="email-input" placeholder="ENTER YOUR E-MAIL" required>
+                    <button type="submit" class="btn btn-solid-large">REQUEST EARLY ACCESS <i class="fas fa-arrow-right"></i></button>
+                </form>
+                <p class="success-message" id="form-success">ACCESS GRANTED. CHECK YOUR INBOX.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h2>NEXUS<span class="neon-text">.</span></h2>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="hover-link" data-text="INSTAGRAM">IG</a>
+                <a href="#" class="hover-link" data-text="TWITTER">TW</a>
+                <a href="#" class="hover-link" data-text="DISCORD">DC</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NEXUS TECH INC. // ALL RIGHTS RESERVED.</p>
+            <p class="neon-text">CODE: PROFESSIONAL GRADE</p>
+        </div>
+    </footer>
+
+    <!-- 3D Interactive Product Modal -->
+    <div class="product-modal hidden" id="product-modal">
+        <button class="close-modal" id="close-modal"><i class="fas fa-times"></i> FECHAR</button>
+        <div class="modal-content">
+            <div class="modal-info">
+                <h2 class="modal-title" id="modal-title">NOME DO PRODUTO</h2>
+                <p class="modal-desc" id="modal-desc">Descrição completa do produto carregada dinamicamente.</p>
+                <div class="modal-specs" id="modal-specs">
+                    <!-- Specs dynamic inject -->
+                </div>
+                <a href="#preorder" class="btn btn-solid" id="modal-buy-btn">PRÉ-VENDA</a>
+            </div>
+            <div class="modal-3d-view">
+                <canvas id="webgl-canvas"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Three.js Import Map -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
